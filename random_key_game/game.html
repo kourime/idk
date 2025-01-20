@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Игра: Случайный символ</title>
+</head>
+
+<body>
+  <h1>Игра: Нажми любую клавишу</h1>
+  <p>Нажмите любую клавишу, чтобы увидеть сообщение!</p>
+
+  <script>
+    function getRandomKey() {
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+      const randomIndex = Math.floor(Math.random() * chars.length);
+      return chars[randomIndex];
+    }
+
+    function logger(key) {
+      alert('Вы нажали ' + key + ' !!!');
+    }
+
+    document.addEventListener('keydown', function(event) {
+      const randomKey = getRandomKey();
+      logger(randomKey);
+    });
+  </script>
+</body>
+
+</html>
