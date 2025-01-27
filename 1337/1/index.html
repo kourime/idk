@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проверка JavaScript</title>
+</head>
+<body>
+  <h1>Проверка JavaScript</h1>
+
+  <script>
+    function showMessage() {
+      let message = "Привет, я JavaScript!";
+      alert(message);
+    }
+
+    showMessage();
+
+    let userName = 'Вася';
+
+    function displayMessage() {
+      let message = 'Привет, ' + userName;
+      alert(message);
+    }
+
+    displayMessage();
+
+    userName = "Петя";
+
+    function updateMessage() {
+      userName = "Петя";
+      let message = 'Привет, ' + userName;
+      alert(message);
+    }
+
+    alert(userName);
+
+    updateMessage();
+
+    alert(userName);
+
+    function localExample() {
+      let userName = "Петя";
+      let message = 'Привет, ' + userName;
+      alert(message);
+    }
+
+    localExample();
+
+    alert(userName);
+  </script>
+</body>
+</html>

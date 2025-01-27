@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Expression и Function Declaration</title>
+</head>
+<body>
+  <h1>Пример использования Function Expression и Function Declaration</h1>
+  <script>
+    function sayHi() {
+      alert("Привет");
+    }
+
+    sayHi();
+
+    let sayHiExpr = function() {
+      alert("Привет из Function Expression");
+    };
+
+    sayHiExpr();
+
+    let copiedFunction = sayHiExpr;
+    copiedFunction();
+
+    function ask(question, yes, no) {
+      if (confirm(question)) yes();
+      else no();
+    }
+
+    ask(
+      "Вы согласны?",
+      function() { alert("Вы согласились."); },
+      function() { alert("Вы отменили выполнение."); }
+    );
+
+    let age = prompt("Сколько Вам лет?", 18);
+
+    if (age < 18) {
+      function welcome() {
+        alert("Привет, юный посетитель!");
+      }
+      welcome();
+    } else {
+      function welcome() {
+        alert("Здравствуйте, взрослый пользователь!");
+      }
+      welcome();
+    }
+
+    let age2 = prompt("Сколько Вам лет?", 18);
+    let welcomeMessage;
+
+    if (age2 < 18) {
+      welcomeMessage = function() {
+        alert("Привет, юный посетитель!");
+      };
+    } else {
+      welcomeMessage = function() {
+        alert("Здравствуйте, взрослый пользователь!");
+      };
+    }
+
+    welcomeMessage();
+
+    let age3 = prompt("Сколько Вам лет?", 18);
+
+    let welcomeShort = (age3 < 18) ?
+      function() { alert("Привет, юный посетитель!"); } :
+      function() { alert("Здравствуйте, взрослый пользователь!"); };
+
+    welcomeShort();
+  </script>
+</body>
+</html>
