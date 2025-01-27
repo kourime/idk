@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Четное или нечетное</title>
+</head>
+<body>
+    <h1>Проверка на четность</h1>
+    <p>Введите число: <input type="number" id="number" value="4"></p>
+    <button onclick="checkEvenOdd()">Проверить</button>
+    <p>Результат: <span id="result"></span></p>
+
+    <script>
+        const isEven = num => num % 2 === 0 ? "четное" : "нечетное";
+
+        function checkEvenOdd() {
+            const number = document.getElementById('number').value;
+            const result = isEven(number);
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+</body>
+</html>

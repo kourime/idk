@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Area</title>
+</head>
+<body>
+    <h1>Рассчитать площадь круга</h1>
+    <p>Введите радиус: <input type="number" id="radius" value="5"></p>
+    <button onclick="calculateArea()">Рассчитать</button>
+    <p>Площадь: <span id="result"></span></p>
+
+    <script>
+        function circleArea(radius) {
+            const pi = Math.PI;
+            return pi * Math.pow(radius, 2);
+        }
+
+        function calculateArea() {
+            const radius = document.getElementById('radius').value;
+            const area = circleArea(radius);
+            document.getElementById('result').textContent = area.toFixed(2);
+        }
+    </script>
+</body>
+</html>

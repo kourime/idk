@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Array</title>
+</head>
+<body>
+    <h1>Фильтрация массива</h1>
+    <p>Результат: <span id="result"></span></p>
+
+    <script>
+        const filterArray = (arr, filterFn) => arr.filter(filterFn);
+
+        const numbers = [1, 2, 3, 4, 5];
+        const isOdd = (num) => num % 2 !== 0;
+
+        const result = filterArray(numbers, isOdd);
+        document.getElementById('result').textContent = JSON.stringify(result);
+    </script>
+</body>
+</html>
