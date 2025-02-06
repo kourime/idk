@@ -1,0 +1,156 @@
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #121212; 
+    color: #ffffff; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    z-index: -1;
+}
+
+#mine-btn { 
+    cursor: pointer; 
+    width: 100px; 
+    height: 100px;
+    background-color: yellow; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: black;
+    transition: transform 0.2s ease;
+    user-select: none;
+}
+
+#mine-btn:hover {
+    transform: scale(1.1);
+}
+
+.environment { 
+    position: absolute; 
+    bottom: 0; 
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    transition: opacity 1s ease;
+}
+
+.environment.sun {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/227/400/19/sunset-the-sun-the-evening-mountains-wallpaper-preview.jpg");
+}
+
+.environment.house {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/009/675/995/non_2x/game-background-cartoon-game-design-nature-asset-home-on-the-road-inside-the-game-vector.jpg");
+}
+
+.environment.city {
+    background-image: url("https://i.pinimg.com/736x/de/49/a0/de49a0a34dd383672c985e29ba7b0b75.jpg");
+}
+
+.environment.river {
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/1007061145046178950/3200AD2E1773D2EEAFBD230792752A35ACAE480F/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true");
+}
+
+.environment.mountain {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/159/996/998/dota-2-wallpaper-preview.jpg");
+}
+
+.environment.forest {
+    background-image: url("https://grizly.club/sec2/uploads/posts/2024-02/grizly-club-p-fon-dota-les-2.jpg");
+}
+
+.environment:hover {
+    opacity: 1;
+}
+
+#upgrade-modal { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.8); 
+    color: white; 
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 1000;
+}
+
+.modal-content { 
+    background: #1e1e1e; 
+    color: white; 
+    padding: 20px; 
+    border-radius: 10px;
+    text-align: center;
+}
+
+button { 
+    background-color: #6200ea; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    margin: 10px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    font-size: 1rem;
+}
+
+button:hover { 
+    background-color: #3700b3; 
+}
+
+#upgrade-btn {
+    background-color: #03dac6;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+#upgrade-btn:hover {
+    background-color: #018786;
+}
+
+#coins, #auto {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+#coins {
+    font-weight: bold;
+}
+
+#auto {
+    font-style: italic;
+}
+
+#close-upgrades {
+    background-color: #ff4081;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+#close-upgrades:hover {
+    background-color: #f50057;
+}
